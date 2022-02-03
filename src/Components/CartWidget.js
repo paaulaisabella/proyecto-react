@@ -1,9 +1,12 @@
-import Imagen from "../Media/carro-de-la-carretilla.png"
+import Imagen from "../Media/carrito-de-compras-1.png"
 
 const CartWidget = () => {
     return(
         <>
-        <image src = {Imagen}/>
+        <div className="cart">
+        <img src = {Imagen} className="cart-img"></img>
+        <p className="cart-items-number">3</p>
+        </div>
         </>
     )
 }

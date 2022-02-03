@@ -29,7 +29,6 @@ a:hover{
 
 .navlist{
   display: flex;
-  margin-right: 40%;
   list-style-type: none;
   width: 20%;
   height: 100%;
@@ -49,4 +48,38 @@ a:hover{
 
 .navlist-item:hover{
   background-color: #ad9aad;
+}
+
+
+/* CARRITO DE COMPRAS */
+
+.cart{
+  display: flex;
+  justify-content: space-between;
+  margin-right: 1rem;
+
+}
+
+.cart-img{
+  width: 2rem;
+  height: 2rem;
+  align-self: center;
+}
+
+.cart-items-number{
+  font-family: 'Courier New', Courier, monospace;
+  align-self: center;
+  background-color: #ad9aad;
+  border-radius: 50%;
+  padding: 2px;
+  width: 1rem;
+  height: 1rem;
+  text-align: center;
+}
+
+/* TEMPORAL */
+
+.greeting{
+  text-align: center;
+  margin-top: 1rem;
 }
