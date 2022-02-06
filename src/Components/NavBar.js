@@ -10,7 +10,7 @@ let NavBar = () => {
         <li className="navlist-item"><a className="navlist-link">Catálogo</a></li>
         <li className="navlist-item"><a className="navlist-link">Contácto</a></li>
         </ul>
-        <CartWidget></CartWidget>
+        <CartWidget/>
     </nav>
     </>
     );
