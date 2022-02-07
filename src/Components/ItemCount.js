@@ -1,14 +1,14 @@
 import { useState } from "react"
 
-const ItemCount = () => {
+const ItemCount = (props) => {
 
     const [stock, setStock] = useState(1);
 
     const increment = () => {
         setStock(stock+1);
 
-        if (stock >= 5){
-            setStock(5)
+        if (stock >= props.maxStock){
+            setStock(props.maxStock)
         }
     }
 

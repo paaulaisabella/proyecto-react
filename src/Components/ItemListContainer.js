@@ -5,7 +5,7 @@ const ItemListContainer = (props) => {
         <>
         <div>
             <h2 className="greeting">{props.greeting}</h2>
-            <ItemCount/>
+            <ItemCount maxStock ="5"/>
         </div>
         </>
     );
