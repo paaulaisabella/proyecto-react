@@ -107,7 +107,20 @@ a:hover, button:hover{
 
 /* TEMPORAL */
 
-.greeting{
-  text-align: center;
+.itemCard{
+  margin-left: 1rem;
+  border: #c9bbc8;
   margin-top: 1rem;
+  box-shadow: 0px 1.5px 1.5px 1px rgba(178, 178, 179, 0.502);
+  width: fit-content;
+  border-radius: 5px;
+  padding-bottom: 1rem;
+}
+
+.itemImg{
+  width: 18rem;
+}
+
+.itemName, .itemPrice{
+margin-left: 1rem;
 }

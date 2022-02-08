@@ -1,11 +1,27 @@
+import Item from "./Item"
 import ItemCount from "./ItemCount"
+import Imagen1 from "../Media/fotos_react/anillo_flor.jpg"
 
-const ItemListContainer = (props) => {
+
+const items = [
+    {
+        id: 1,
+        name: "Anillo Flor",
+        price: 5000,
+        picUrl: Imagen1
+    }
+]
+
+const ItemListContainer = () => {
     return(
         <>
         <div>
-            <h2 className="greeting">{props.greeting}</h2>
-            <ItemCount maxStock ="5"/>
+            <Item 
+            key= {items[0].id}
+            picUrl={items[0].picUrl}
+            name= {items[0].name}
+            price= {items[0].price}/>
+            <ItemCount maxStock ="5" minStock= "1"/>
         </div>
         </>
     );

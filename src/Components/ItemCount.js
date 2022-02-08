@@ -2,20 +2,18 @@ import { useState } from "react"
 
 const ItemCount = (props) => {
 
-    const [stock, setStock] = useState(1);
+    const [stock, setStock] = useState(props.minStock);
 
     const increment = () => {
-        setStock(stock+1);
-
-        if (stock >= props.maxStock){
-            setStock(props.maxStock)
+        
+        if (stock < props.maxStock){
+            setStock(stock+1);
         }
     }
 
     const decrease = () => {
-        setStock(stock-1);
-        if (stock <= 1){
-            setStock(1)
+        if (stock > props.minStock){
+            setStock(stock-1);
         }
     }
 
