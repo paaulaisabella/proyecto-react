@@ -97,7 +97,7 @@ a:hover, button:hover{
   margin-bottom: 1rem;
 }
 
-.stockBtn, .addToCartBtn{
+.stockBtn, .addToCartBtn, .detailBtn{
   background-color: #e5c1cd;
   border: #c9bbc8;
   padding: .5rem;
@@ -106,6 +106,7 @@ a:hover, button:hover{
 }
 
 /* TEMPORAL */
+
 .itemSection{
   display: flex;
   flex-wrap: wrap;
@@ -118,13 +119,9 @@ a:hover, button:hover{
   box-shadow: 0px 1.5px 1.5px 1px rgba(178, 178, 179, 0.502);
   width: fit-content;
   border-radius: 5px;
-  padding-bottom: 1rem;
+  padding: 0 1rem 1rem;
 }
 
 .itemImg{
   width: 18rem;
-}
-
-.itemName, .itemPrice{
-margin-left: 1rem;
 }

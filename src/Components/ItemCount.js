@@ -17,8 +17,8 @@ const ItemCount = (props) => {
         }
     }
 
-    const greet = () => {
-        alert("Helloooo!!!")
+    const greet= () => {
+        alert('Vas a agregar este elemento al carrito')
     }
 
     return (
