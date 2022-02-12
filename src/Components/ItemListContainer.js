@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import { customFetch } from "./customFetch";
-import Item from "./Item"
+import { customFetch } from "../utils/customFetch";
 import ItemCount from "./ItemCount"
+import ItemList from "./ItemList";
 
-const {items} = require("./ItemList") 
+const {items} = require("../utils/productos") 
 
 const ItemListContainer = () => {
 
@@ -20,16 +20,8 @@ const ItemListContainer = () => {
     return(
         <>
         <section className="itemSection">
-        {product.map(item => 
-            
-                <Item 
-                key= {item.id}
-                picUrl={item.picUrl}
-                name= {item.name}
-                price= {item.price}
-                />
-                )}
-                <ItemCount maxStock ="5" minStock= "1"/>
+            <ItemList productos= {product}/>
+            <ItemCount maxStock ="5" minStock= "1"/>
         </section>
         </>
     );
