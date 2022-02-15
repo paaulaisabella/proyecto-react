@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { customFetch } from "../utils/customFetch";
-import ItemCount from "./ItemCount"
 import ItemList from "./ItemList";
 
 const {items} = require("../utils/productos") 
@@ -21,7 +20,6 @@ const ItemListContainer = () => {
         <>
         <section className="itemSection">
             <ItemList productos= {product}/>
-            <ItemCount maxStock ="5" minStock= "1"/>
         </section>
         </>
     );

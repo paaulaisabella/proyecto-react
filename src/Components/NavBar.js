@@ -1,10 +1,11 @@
 import CartWidget from "./CartWidget";
+import logo from "../Media/logo.png"
 
 let NavBar = () => {
     return (
         <>
     <nav className= "navbar">
-        <h1 className="title">Shine Like a Diamond</h1>
+        <img src = {logo}/>
         <ul className="navlist">
         <li className="navlist-item"><a className="navlist-link">Inicio</a></li>
         <li className="navlist-item"><a className="navlist-link">Catálogo</a></li>
