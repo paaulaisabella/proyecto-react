@@ -78,7 +78,7 @@ a:hover, button:hover{
 
 /* ADD TO CART */
 .addToCart{
-  margin-left: 1rem;
+  margin-top: 1rem;
 }
 
 .stock{
@@ -124,4 +124,14 @@ a:hover, button:hover{
 
 .itemImg{
   width: 18rem;
+}
+
+.itemDetail{
+  display: flex;
+  margin-top: 1rem;
+}
+
+.detailDesc{
+  margin-left: 1rem;
+  line-height: 2rem;
 }

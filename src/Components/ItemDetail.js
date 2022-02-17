@@ -1,16 +1,20 @@
-const ItemDetail = (props) =>{
+import ItemCount from "./ItemCount";
+
+const ItemDetail = ({product}) =>{
 
     return(
-        <>
-        <section>
-            <img src={props.picUrl}></img>
+        <article className="itemDetail">
+        <section className="detailImg">
+            <img src={product.picUrl}></img>
         </section>
-        <section>
-            <h2>{props.name}</h2>
-            <p>{props.description}</p>
-            <h3>${props.price}</h3>
+        <section className="detailDesc">
+            <h2>{product.name}</h2>
+            <p>{product.description}</p>
+            <h3>${product.price}</h3>
+            <h5>Actualmente en stock: {product.stock}</h5>
+            <ItemCount maxStock= {product.stock} minStock={1}/>
         </section>
-        </>
+        </article>
     )
 }
 
