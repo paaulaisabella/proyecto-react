@@ -6,7 +6,7 @@ import ItemDetail from "./ItemDetail"
 const {items} = require("../utils/productos") 
 
 const ItemDetailContainer = () => {
-
+    const [loading, setLoading] = useState(true);
     const [product, setProduct] = useState({});
     const {idItem} = useParams();
     console.log(idItem);
@@ -14,6 +14,7 @@ const ItemDetailContainer = () => {
     useEffect(() => {
         getItem(items.find(item => item.id === parseInt(idItem)), 2000)
         .then((resolve) => setProduct(resolve))
+        .then(() => setLoading(false))
         .catch((error) => console.log(error))
     }, [idItem]);
 
@@ -21,8 +22,7 @@ const ItemDetailContainer = () => {
     return(
         <>
         <section className="itemSection">
-            <ItemDetail product= {product}
-            />
+        {loading ? ("Cargando...") : <ItemDetail product= {product} />}
         </section>
         </>
     );
