@@ -10,6 +10,7 @@ const ItemList = (props) => {
         picUrl={item.picUrl}
         name= {item.name}
         price= {item.price}
+        id= {item.id}
         />
         ))
 }
