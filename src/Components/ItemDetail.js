@@ -12,7 +12,7 @@ const ItemDetail = ({product}) =>{
             <p>{product.description}</p>
             <h3>${product.price}</h3>
             <h5>Actualmente en stock: {product.stock}</h5>
-            <ItemCount maxStock= {product.stock} minStock={1}/>
+            <ItemCount maxStock= {product.stock} minStock={1} />
         </section>
         </article>
     )

@@ -1,8 +1,10 @@
+import { Link } from "react-router-dom";
 import { useState } from "react"
 
 const ItemCount = (props) => {
 
     const [stock, setStock] = useState(props.minStock);
+    const [checkoutBtn, setCheckoutBtn] = useState(true);
 
     const increment = () => {
         
@@ -17,8 +19,9 @@ const ItemCount = (props) => {
         }
     }
 
-    const greet= () => {
-        alert('Vas a agregar este elemento al carrito')
+    const onAdd= () => {
+        alert(`Agregaste ${stock} de este producto`);
+        setCheckoutBtn(false);
     }
 
     return (
@@ -29,9 +32,14 @@ const ItemCount = (props) => {
             <p className="stockTxt">{stock}</p>
             <button onClick={decrease} className="stockBtn">-</button>
         </div>
+        
         <div>
-            <button onClick={greet} className="addToCartBtn">Agregar al carrito</button>
-        </div>
+        {    checkoutBtn ?
+            <button onClick={onAdd} className="addToCartBtn">Agregar al carrito</button>
+            : <Link to= '/cart'><button className="checkoutBtn">Checkout</button></Link>
+        }
+            </div>
+        
         </section>
         </>
     )
