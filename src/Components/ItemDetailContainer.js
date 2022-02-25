@@ -9,7 +9,6 @@ const ItemDetailContainer = () => {
     const [loading, setLoading] = useState(true);
     const [product, setProduct] = useState({});
     const {idItem} = useParams();
-    console.log(idItem);
 
     useEffect(() => {
         getItem(items.find(item => item.id === parseInt(idItem)), 2000)

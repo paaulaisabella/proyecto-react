@@ -7,8 +7,13 @@ const Cart = () => {
 
     return (
         <>
-        <h1 className='cartTitle'>CARRITO</h1>
-        <button className= "addToCartBtn deleteAllBtn" onClick={cart.deleteAll}>Borrar Todo</button>
+    <h1 className='cartTitle'>CARRITO</h1>
+
+        {cart.itemList.length === 0 && (
+            <h2 className='emptyCart'>EL CARRITO ESTÁ VACÍO.</h2>
+            )}
+
+        <button className= "addToCartBtn deleteAllBtn" onClick={cart.clear}>Borrar Todo</button>
         {cart.itemList.map(item => (
         <section className='cartItem'>
             <img src={item.img} className= 'cartItem-img'></img>
@@ -19,7 +24,7 @@ const Cart = () => {
             <p className='cartItem-total'>Total: ${item.price*item.cant} Pesos </p>
             </div>
             <div>
-            <button className= "addToCartBtn deleteItem" onClick={cart.deleteItem}>Eliminar Producto</button>
+            <button className= "addToCartBtn deleteItem" onClick={() => cart.removeItem(item.id)}>Eliminar Producto</button>
             </div>
         </section>
         )
