@@ -151,3 +151,40 @@
   margin-left: 1rem;
   line-height: 2rem;
 }
+
+/* CARRITO */
+
+.cartTitle{
+  text-align: center;
+}
+
+.deleteAllBtn{
+  margin-left: 90%;
+}
+
+.deleteItem{
+  align-self: center;
+  background-color: #c9bbc8;
+}
+
+.cartItem{
+  display: flex;
+  height: 40vh;
+  width: 60vw;
+  border: 1px solid #ad9aadad;
+  border-radius: 15px;
+  margin: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  box-shadow: 0px 1.5px 1.5px 1px rgba(178, 178, 179, 0.502);
+}
+
+.cartItem-img{
+  height: 40vh;
+}
+
+.cartItem-total{
+  font-size: xx-large;
+  margin-top: 3rem;
+}

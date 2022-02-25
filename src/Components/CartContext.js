@@ -1,4 +1,5 @@
 import {createContext, useState} from 'react';
+import { useParams } from "react-router-dom";
 
 export const CartContext = createContext();
 
@@ -22,8 +23,12 @@ const CartContextProvider = ({children}) => {
         setItemList([]);
     }
 
+    const deleteItem = () => {
+        
+    }
+
     return(
-        <CartContext.Provider value= {{itemList, addToCart, deleteAll}}>
+        <CartContext.Provider value= {{itemList, addToCart, deleteAll, deleteItem}}>
             {children}
         </CartContext.Provider>
     )
