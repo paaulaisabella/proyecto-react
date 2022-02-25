@@ -1,6 +1,7 @@
 import Imagen from "../Media/carrito-de-compras-1.png"
 
 const CartWidget = () => {
+
     return(
         <>
         <div className="cart">

@@ -1,14 +1,17 @@
 import ItemCount from "./ItemCount";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { CartContext } from "./CartContext";
 
 const ItemDetail = ({product}) =>{
 
     const [checkoutBtn, setCheckoutBtn] = useState(true);
+    const test = useContext(CartContext);
 
     const onAdd = (stock) => {
         alert(`Agregaste ${stock} este producto`);
         setCheckoutBtn(false);
+        test.addToCart(product, stock);
     };
 
     return(
