@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import { CartContext } from './CartContext';
 
 const Cart = () => {
@@ -9,10 +10,15 @@ const Cart = () => {
         <>
     <h1 className='cartTitle'>CARRITO</h1>
 
-        {cart.itemList.length === 0 && (
+        { cart.itemList.length === 0 && (
+            <>
             <h2 className='emptyCart'>EL CARRITO ESTÁ VACÍO.</h2>
-            )}
+            <Link to= "/"><button className='addToCartBtn'>Volver a inicio</button></Link>
+            </>
+        )}
 
+        {cart.itemList.length !== 0 && (
+            <>
         <button className= "addToCartBtn deleteAllBtn" onClick={cart.clear}>Borrar Todo</button>
         {cart.itemList.map(item => (
         <section className='cartItem'>
@@ -27,9 +33,9 @@ const Cart = () => {
             <button className= "addToCartBtn deleteItem" onClick={() => cart.removeItem(item.id)}>Eliminar Producto</button>
             </div>
         </section>
-        )
-        )
-        }
+        ))}
+        </>
+        )}
         </>
     )
 }
