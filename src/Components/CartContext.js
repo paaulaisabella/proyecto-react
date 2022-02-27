@@ -22,6 +22,7 @@ const CartContextProvider = ({children}) => {
                     img: item.picUrl,
                     price: item.price,
                     cant: stock,
+                    total: item.price*stock
                 }
             ]);
         }

@@ -7,6 +7,8 @@ const CartWidget = () => {
 
     const cart = useContext(CartContext);
     console.log(cart.itemList);
+
+    const cartNumber= cart.itemList.reduce((acc, el) => acc + el.cant, 0);
     return(
         <>
         <Link to= "/cart">
@@ -16,10 +18,7 @@ const CartWidget = () => {
         {
         cart.itemList.length !== 0 &&
         (<>
-            {cart.itemList.forEach((item) => {
-                <p className="cart-items-number">{item.cant}</p>
-            }
-            )}
+                <p className="cart-items-number">{cartNumber}</p>
         </>
         )
     }

@@ -60,45 +60,6 @@
   background-color: #ad9aad;
 }
 
-/* CARRITO DE COMPRAS */
-
-.checkoutBtn{
-  background-color: #f3dbcf;
-  border: #c9bbc8;
-  padding: .5rem;
-  border-radius: 3px;
-  box-shadow: 0px 1.5px 1.5px 1px rgba(178, 178, 179, 0.502);
-}
-
-.cart{
-  display: flex;
-  justify-content: space-between;
-  margin-right: 1rem;
-}
-
-.cart-img{
-  width: 2rem;
-  height: 2rem;
-  align-self: center;
-}
-
-.cart-items-number{
-  font-family: 'Courier New', Courier, monospace;
-  align-self: center;
-  background-color: #ad9aad;
-  border-radius: 50%;
-  padding: 2px;
-  width: 1rem;
-  height: 1rem;
-  text-align: center;
-}
-
-.emptyCart{
-  color: #928791;
-  font-size: medium;
-  text-align: center;
-}
-
 /* ADD TO CART */
 .addToCart{
   margin-top: 1rem;
@@ -159,18 +120,83 @@
   line-height: 2rem;
 }
 
-/* CARRITO */
+/* CARRITO DE COMPRAS */
+
+.checkoutBtn{
+  background-color: #f3dbcf;
+  border: #c9bbc8;
+  padding: .5rem;
+  border-radius: 3px;
+  box-shadow: 0px 1.5px 1.5px 1px rgba(178, 178, 179, 0.502);
+}
+
+.cart{
+  display: flex;
+  justify-content: space-between;
+  margin-right: 1rem;
+}
+
+.cart-img{
+  width: 2rem;
+  height: 2rem;
+  align-self: center;
+}
+
+.cart-items-number{
+  font-family: 'Courier New', Courier, monospace;
+  align-self: center;
+  background-color: #ad9aad;
+  border-radius: 50%;
+  padding: 2px;
+  width: 1rem;
+  height: 1rem;
+  text-align: center;
+  font-weight: 1000;
+}
+
+.emptyCart{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.emptyCart-text{
+  color: #928791;
+  font-size: medium;
+  text-align: center;
+}
+
+.homeBtn{
+  margin-top: 2rem;
+  padding: .5rem;
+  font-size: medium;
+  background-color: #aac9ce;
+  border: solid 1px #333c3d;
+  border-radius: 3px;
+  box-shadow: 0px 1.5px 1.5px 1px rgba(178, 178, 179, 0.502);
+  transition: all .3s;
+}
+
+.homeBtn:hover{
+  background-color: #9cbcc0;
+  transform: scale(1.1);
+}
+
+.checkout{
+  display: flex;
+}
 
 .cartTitle{
   text-align: center;
 }
 
 .deleteAllBtn{
-  margin-left: 90%;
+  margin: 1rem;
 }
 
 .deleteItem{
-  align-self: center;
+  align-self: flex-start;
   background-color: #c9bbc8;
 }
 
@@ -194,4 +220,24 @@
 .cartItem-total{
   font-size: xx-large;
   margin-top: 3rem;
+}
+
+.cartTotal{
+  border: 1px solid black;
+  margin: 1rem;
+  width: 30vw;
+  padding: 1rem;
+  border-radius: 15px;
+}
+
+.resumenText{
+  display: flex;
+  justify-content: space-between;
+}
+
+.resumenText:first-of-type{
+  margin-top: 1rem;
+}
+.resumenText:last-of-type{
+  margin-bottom: 1rem;
 }
