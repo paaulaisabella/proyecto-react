@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
-import { customFetch } from "../utils/customFetch";
 import ItemList from "./ItemList";
 import { useParams } from 'react-router-dom';
-
-const {items} = require("../utils/productos") 
+import { collection, getDocs } from "firebase/firestore";
+import db from "../utils/firebase"
 
 const ItemListContainer = () => {
 
@@ -12,7 +11,7 @@ const ItemListContainer = () => {
     const {idCategory} = useParams();
 
     useEffect(() => {
-        if(idCategory == undefined){
+        /* if(idCategory == undefined){
             customFetch(items, 2000)
         .then((resolve) => setProduct(resolve))
         .then(() => setLoading(false))
@@ -22,7 +21,27 @@ const ItemListContainer = () => {
         .then((resolve) => setProduct(resolve))
         .then(() => setLoading(false))
         .catch((error) => console.log(error))
+        } */
+
+        const firestoreFetch = async() => {
+            const querySnapshot = await getDocs(collection(db, "items"));
+            return querySnapshot.docs.map(document => ({
+                id: document.id,
+                ...document.data()
+            }))
+        };
+        if(idCategory == undefined){
+            firestoreFetch()
+                .then(result => setProduct(result))
+                .then(() => setLoading(false))
+                .catch(error => console.log(error));
+        } else{
+            firestoreFetch(product.filter(item => item.categoryID === parseInt(idCategory)))
+                .then(result => setProduct(result))
+                .then(() => setLoading(false))
+                .catch(error => console.log(error));
         }
+        console.log(idCategory)
     }, [idCategory]);
 
     

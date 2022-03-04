@@ -32,7 +32,7 @@ let items = [
     {
         id: 4,
         name: "Aros Cereza",
-        description: "Aros con forma de cereza en color rosa, muy lindos para llevar en situaciones casuales. ",
+        description: "Aros con forma de cereza en color rosa, muy lindos para llevar en situaciones casuales.",
         category: "aros",
         categoryID: 2,
         price: 1300,

@@ -6,7 +6,6 @@ import { useContext } from "react";
 const CartWidget = () => {
 
     const cart = useContext(CartContext);
-    console.log(cart.itemList);
 
     const cartNumber= cart.itemList.reduce((acc, el) => acc + el.cant, 0);
     return(
