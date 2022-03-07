@@ -241,3 +241,9 @@
 .resumenText:last-of-type{
   margin-bottom: 1rem;
 }
+
+.loadingImg{
+  margin: auto;
+  width: 6rem;
+  height: 8rem;
+}

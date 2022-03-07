@@ -5,9 +5,9 @@ import { doc, getDoc } from "firebase/firestore";
 export const firestoreFetch = async(idCategory) => {
 
     let item= query(collection(db, "products"));
-    /* if (idCategory){
+    if (idCategory){
         item= query(collection(db, "products"), where('categoryID', '==', idCategory));
-    } */
+    }
 
     const querySnapshot = await getDocs(item);
     return querySnapshot.docs.map(document => ({

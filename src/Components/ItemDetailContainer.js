@@ -18,11 +18,12 @@ const ItemDetailContainer = () => {
 
     }, [idItem]);
 
-    
+    let img= "https://firebasestorage.googleapis.com/v0/b/proyecto-react-4fcfb.appspot.com/o/POO8fEn.gif?alt=media&token=6def60b2-14f7-47c7-bb4c-d88bf0ab2927"
+
     return(
         <>
         <section className="itemSection">
-        {loading ? ("Cargando...") : <ItemDetail product= {product} />}
+        {loading ? (<img  className= "loadingImg"src= {img} alt= "Cargando..."/>) : <ItemDetail product= {product} />}
         </section>
         </>
     );

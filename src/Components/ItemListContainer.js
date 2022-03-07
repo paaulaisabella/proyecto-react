@@ -15,13 +15,14 @@ const ItemListContainer = () => {
                 .then(() => setLoading(false))
                 .catch(error => console.log(error));
     }, [idCategory]);
+    console.log(idCategory)
 
-    let img= "https://images.app.goo.gl/vGKpcWdCLooHHP8c7"
+    let img= "https://firebasestorage.googleapis.com/v0/b/proyecto-react-4fcfb.appspot.com/o/POO8fEn.gif?alt=media&token=6def60b2-14f7-47c7-bb4c-d88bf0ab2927"
     
     return(
         <>
         <section className="itemSection">
-            {loading ? (<img src= {img} alt= "Cargando..."/>) : <ItemList productos= {product}/>}
+            {loading ? (<img  className= "loadingImg"src= {img} alt= "Cargando..."/>) : <ItemList productos= {product}/>}
         </section>
         </>
     );
