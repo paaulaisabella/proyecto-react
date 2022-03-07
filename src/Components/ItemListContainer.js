@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import ItemList from "./ItemList";
 import { useParams } from 'react-router-dom';
-import { collection, getDocs } from "firebase/firestore";
-import db from "../utils/firebase"
+import { firestoreFetch } from "../utils/firebaseFetch"
 
 const ItemListContainer = () => {
 
@@ -11,44 +10,18 @@ const ItemListContainer = () => {
     const {idCategory} = useParams();
 
     useEffect(() => {
-        /* if(idCategory == undefined){
-            customFetch(items, 2000)
-        .then((resolve) => setProduct(resolve))
-        .then(() => setLoading(false))
-        .catch((error) => console.log(error))
-        } else{
-        customFetch(items.filter(item => item.categoryID === parseInt(idCategory)), 2000)
-        .then((resolve) => setProduct(resolve))
-        .then(() => setLoading(false))
-        .catch((error) => console.log(error))
-        } */
-
-        const firestoreFetch = async() => {
-            const querySnapshot = await getDocs(collection(db, "items"));
-            return querySnapshot.docs.map(document => ({
-                id: document.id,
-                ...document.data()
-            }))
-        };
-        if(idCategory == undefined){
-            firestoreFetch()
+            firestoreFetch(idCategory)
                 .then(result => setProduct(result))
                 .then(() => setLoading(false))
                 .catch(error => console.log(error));
-        } else{
-            firestoreFetch(product.filter(item => item.categoryID === parseInt(idCategory)))
-                .then(result => setProduct(result))
-                .then(() => setLoading(false))
-                .catch(error => console.log(error));
-        }
-        console.log(idCategory)
     }, [idCategory]);
 
+    let img= "https://images.app.goo.gl/vGKpcWdCLooHHP8c7"
     
     return(
         <>
         <section className="itemSection">
-            {loading ? ("Cargando...") : <ItemList productos= {product}/>}
+            {loading ? (<img src= {img} alt= "Cargando..."/>) : <ItemList productos= {product}/>}
         </section>
         </>
     );

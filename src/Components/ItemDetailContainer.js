@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { getItem } from "../utils/getItem";
 import ItemDetail from "./ItemDetail"
+import { firestoreFetchOne } from "../utils/firebaseFetch"
 
-const {items} = require("../utils/productos") 
 
 const ItemDetailContainer = () => {
     const [loading, setLoading] = useState(true);
@@ -11,10 +10,12 @@ const ItemDetailContainer = () => {
     const {idItem} = useParams();
 
     useEffect(() => {
-        getItem(items.find(item => item.id === parseInt(idItem)), 2000)
+
+        firestoreFetchOne(idItem)
         .then((resolve) => setProduct(resolve))
         .then(() => setLoading(false))
         .catch((error) => console.log(error))
+
     }, [idItem]);
 
     
