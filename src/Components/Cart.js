@@ -21,7 +21,7 @@ const Cart = () => {
             <section className='checkout'>
                 <section>
         {cart.itemList.map(item => (
-            <section className='cartItem'>
+            <section key={item.id} className='cartItem'>
             <img src={item.img} className= 'cartItem-img'></img>
             <div>
             <h2 className='cartItem-name'>{item.name}</h2> 

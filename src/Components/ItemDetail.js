@@ -17,7 +17,7 @@ const ItemDetail = ({product}) =>{
     return(
         <article className="itemDetail">
         <section className="detailImg">
-            <img src={product.picUrl}></img>
+            <img src={product.picUrl} alt= {product.name} className= "prodImg"/>
         </section>
         <section className="detailDesc">
             <h2>{product.name}</h2>
