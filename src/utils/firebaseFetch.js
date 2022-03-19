@@ -1,17 +1,20 @@
-import { collection, getDocs, query, where } from "firebase/firestore";
+import { collection, getDocs, query, where, orderBy } from "firebase/firestore";
 import db from "./firebase";
 import { doc, getDoc } from "firebase/firestore";
 
 export const firestoreFetch = async(idCategory) => {
 
+    const productsRef = collection(db, "items");
+
     let q; 
     if (idCategory !== undefined){
-        q= query(collection(db, "items"), where("categoryID", "==", idCategory));
+        q= query(productsRef, where('categoryID', '==', idCategory));
     } else {
-        q= query(collection(db, "items"));
+        q= query(productsRef, orderBy('name'));
     }
+    console.log(idCategory);
 
-    const querySnapshot = await getDocs();
+    const querySnapshot = await getDocs(q);
     return querySnapshot.docs.map(document => ({
         id: document.id,
         ...document.data()
