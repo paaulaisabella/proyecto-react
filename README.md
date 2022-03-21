@@ -8,15 +8,21 @@ This jewelry ecommerce called "Shine Like a Diamond" was fully developed using R
 
 ![video-to-gif-converter](https://user-images.githubusercontent.com/91098198/159373296-1d703acf-79ef-4f16-a4a8-b54f02133772.gif)
 
-## Dependencies
+## Built with
 
 - React JS 
 
 ## To run the app locally: 
 
-You should be able to run the app by executing the ´´´npm´´´ command:
+You should be able to run the app by executing the npm command:
 
-´´´
 npm start
-´´´
+
+## Author
+
+Paula Vásquez - FrontEnd developer student, March 21st, 2022. 
+
+## License
+
+To analize/study/fix details on this project it is necessary to start an issue.
 
