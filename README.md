@@ -12,11 +12,15 @@ This jewelry ecommerce called "Shine Like a Diamond" was fully developed using R
 
 - React JS 
 
-## To run the app locally: 
+## To run the app locally 
 
 You should be able to run the app by executing the npm command:
 
 npm start
+
+## Deploy
+
+You can access the page through the html linked in the repository details.
 
 ## Author
 
