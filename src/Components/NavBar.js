@@ -1,8 +1,8 @@
 import CartWidget from "./CartWidget";
-import logo from "../Media/logo.png"
 import { Link } from "react-router-dom";
 
 let NavBar = () => {
+    let logo = 'https://firebasestorage.googleapis.com/v0/b/proyecto-react-4fcfb.appspot.com/o/logo-slad.png?alt=media&token=809ef853-ef86-4dc0-b4cc-0c6d2b8d5b97'
     return (
         <>
     <nav className= "navbar">

@@ -69,8 +69,8 @@ const Cart = () => {
             <div>
             <h2 className='cartItem-name'>{item.name}</h2> 
             <p className='cartItem-qty'>{item.cant} unidad(es)</p>
-            <p className='cartItem-price'>${item.price} Pesos C/U</p>
-            <p className='cartItem-total'>Total: ${item.total} Pesos </p>
+            <p className='cartItem-price'>${item.price} C/U</p>
+            <p className='cartItem-total'>Total: ${item.total} </p>
             </div>
             <div>
             <button className= "addToCartBtn deleteItem" onClick={() => cart.removeItem(item.id)}>x</button>
@@ -88,8 +88,8 @@ const Cart = () => {
                     </section>
                 ))}
                 <hr/>
-                <p>Total: ${total}</p>
-                <button onClick= {createOrder}className='checkoutNowBtn'>Checkout Now</button>
+                <h2>Total: ${total}</h2>
+                <button onClick= {createOrder}className='checkoutNowBtn'>Finalizar Compra</button>
             </section>
     
             <button className= "addToCartBtn deleteAllBtn" onClick={cart.clear}>Borrar Todo</button>
