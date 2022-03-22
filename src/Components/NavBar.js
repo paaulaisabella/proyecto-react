@@ -6,7 +6,7 @@ let NavBar = () => {
     return (
         <>
     <nav className= "navbar">
-        <Link to= "/"><img src= {logo} className="logo"/></Link>
+        <Link to= "/"><img src= {logo} alt= "Shine Like a Diamond" className="logo"/></Link>
         <ul className="navlist">
         <li className="navlist-item"><Link to="/category/1" className="navlist-link">Anillos</Link></li>
         <li className="navlist-item"><Link to="/category/2" className="navlist-link">Aros</Link></li>

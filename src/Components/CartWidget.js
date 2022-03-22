@@ -12,7 +12,7 @@ const CartWidget = () => {
         <>
         <Link to= "/cart">
         <div className="cart">
-        <img src = {Imagen} className="cart-img"></img>
+        <img src = {Imagen} alt= "Cart" className="cart-img"></img>
 
         {
         cart.itemList.length !== 0 &&

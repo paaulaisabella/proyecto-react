@@ -65,7 +65,7 @@ const Cart = () => {
                 <section>
         {cart.itemList.map(item => (
             <section key={item.id} className='cartItem'>
-            <img src={item.img} className= 'cartItem-img'></img>
+            <img src={item.img} alt= {item.name} className= 'cartItem-img'></img>
             <div>
             <h2 className='cartItem-name'>{item.name}</h2> 
             <p className='cartItem-qty'>{item.cant} unidad(es)</p>
