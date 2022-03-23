@@ -29,7 +29,7 @@ const ItemDetail = ({product}) =>{
             <ItemCount maxStock= {product.stock} 
             minStock={1} 
             onAdd={onAdd}/>
-            : <Link to='/cart'><button className="checkoutBtn">Checkout</button></Link>
+            : <Link to='/proyecto-react/cart'><button className="checkoutBtn">Checkout</button></Link>
             }
         </section>
         </article>

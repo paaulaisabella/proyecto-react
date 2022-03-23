@@ -56,7 +56,7 @@ const Cart = () => {
         {cart.itemList.length === 0 && (
             <section className='emptyCart'>
             <h2 className='emptyCart-text'>EL CARRITO ESTÁ VACÍO.</h2>
-            <Link to= "/"><button className='homeBtn'>Volver a inicio</button></Link>
+            <Link to= "/proyecto-react"><button className='homeBtn'>Volver a inicio</button></Link>
             </section>
         )}
 

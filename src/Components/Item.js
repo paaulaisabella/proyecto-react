@@ -8,7 +8,7 @@ const Item = (props) => {
         <img className="itemImg" src={props.picUrl} alt= {props.name}></img>    
         <h3 className="itemName">{props.name}</h3>
             <p className="itemPrice">${props.price}</p>
-        <Link to={`/item/${props.id}`}><button className="detailBtn" id={props.id}>Ver detalle del producto</button></Link>
+        <Link to={`/proyecto-react/item/${props.id}`}><button className="detailBtn" id={props.id}>Ver detalle del producto</button></Link>
         </div>
         </>
     )

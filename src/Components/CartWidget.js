@@ -10,7 +10,7 @@ const CartWidget = () => {
     const cartNumber= cart.itemList.reduce((acc, el) => acc + el.cant, 0);
     return(
         <>
-        <Link to= "/cart">
+        <Link to= "/proyecto-react/cart">
         <div className="cart">
         <img src = {Imagen} alt= "Cart" className="cart-img"></img>
 
